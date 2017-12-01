@@ -9,6 +9,7 @@ set nocompatible
 set modelines=0
 set nowrap
 set expandtab
+set tabstop=8
 set softtabstop=2
 set shiftwidth=2
 "set ai
@@ -29,6 +30,7 @@ set showmode
 :map <S-h> gT
 :map <S-l> gt
 :map <S-j> nop
+:map FF :%bdelete!<CR>
 
 let mapleader = ","
 
@@ -54,3 +56,12 @@ inoremap jj <ESC>
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
+
+au BufNewFile,BufRead *.t set filetype=php
+
+let g:dbext_default_profile = 'PG'
+let g:dbext_default_profile_PG = 'type=PGSQL:user=sparkfun:passwd=:dbname=sparkfun:host=10.1.1.32'
+
+vmap <leader>se <Plug>SendSelectionToTmux
+nmap <leader>se <Plug>NormalModeSendToTmux
+nmap <C-c>r <Plug>SetTmuxVars
