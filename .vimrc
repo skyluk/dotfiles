@@ -9,6 +9,7 @@ set nocompatible
 set modelines=0
 set nowrap
 set expandtab
+set tabstop=8
 set softtabstop=2
 set shiftwidth=2
 "set ai
@@ -61,3 +62,11 @@ vnoremap <F1> <ESC>
 let g:go_fmt_autosave = 0
 
 au BufNewFile,BufRead *.ino set filetype=c
+au BufNewFile,BufRead *.t set filetype=php
+
+let g:dbext_default_profile = 'PG'
+"let g:dbext_default_profile_PG = 'type=PGSQL:user=sparkfun:passwd=:dbname=sparkfun:host=10.1.1.32'
+
+vmap <leader>se <Plug>SendSelectionToTmux
+nmap <leader>se <Plug>NormalModeSendToTmux
+nmap <C-c>r <Plug>SetTmuxVars

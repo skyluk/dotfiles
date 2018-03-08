@@ -36,7 +36,10 @@ alias ack='ack-grep'
 alias agrep='ack-grep'
 
 alias stail='sudo tail'
-alias stailf='stail -f'
+alias stailf='stail -F'
+
+alias log_nginx='sudo grc tail -Fn 50 /var/log/nginx/error.log'
+alias log_spork='sudo grc tail -Fn 50 /var/log/spork/error.log'
 
 # some screen aliases
 alias sattach='screen -raAd'  # reattach to screen session, if there is only one
@@ -44,11 +47,22 @@ alias slist='screen -list'    # list screen sessions
 
 alias gsl='git stash list'
 alias gss='git stash show'
-unalias gcp
 
-SSHAGENT=/usr/bin/ssh-agent
+# create and switch to a new branch
+alias gcb='git checkout -b'
+
+alias sparksql='psql -U sparkfun'
+alias sg='./sparktask sparkgen'
+
+alias l='ls -l'
+
+# git-cherry-pick (too close to gco)
+#unalias gcp
+
+SSHAGENT=`which ssh-agent`
 SSHAGENTARGS="-s"
 if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
   eval `$SSHAGENT $SSHAGENTARGS`
   trap "kill $SSH_AGENT_PID" 0
 fi
+eval "$(grunt --completion=zsh)"
