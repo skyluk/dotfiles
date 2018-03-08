@@ -19,9 +19,10 @@ set showmatch
 set hlsearch
 set showcmd
 set ruler
+set backspace=indent,eol,start
 
 " make pasting text better
-nnoremap <F3> :set invpaste paste?<CR>
+" nnoremap <F3> :set invpaste paste?<CR>
 set pastetoggle=<F3>
 set showmode
 
@@ -29,10 +30,12 @@ set showmode
 :map <S-h> gT
 :map <S-l> gt
 :map <S-j> nop
+:map FF :%bdel!<CR>
 
 let mapleader = ","
 
 map <F2> :NERDTreeToggle<CR>
+map <F3> :NERDTreeFind<CR>
 
 nnoremap ; :
 nnoremap / /\v
@@ -54,3 +57,7 @@ inoremap jj <ESC>
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
+
+let g:go_fmt_autosave = 0
+
+au BufNewFile,BufRead *.ino set filetype=c
