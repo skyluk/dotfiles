@@ -9,9 +9,9 @@ set nocompatible
 set modelines=0
 set nowrap
 set expandtab
-set tabstop=8
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 "set ai
 "set smartindent
 set gdefault
@@ -59,7 +59,7 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
-let g:go_fmt_autosave = 0
+"let g:go_fmt_autosave = 0
 
 au BufNewFile,BufRead *.ino set filetype=c
 au BufNewFile,BufRead *.t set filetype=php
@@ -70,3 +70,5 @@ let g:dbext_default_profile = 'PG'
 vmap <leader>se <Plug>SendSelectionToTmux
 nmap <leader>se <Plug>NormalModeSendToTmux
 nmap <C-c>r <Plug>SetTmuxVars
+
+command! WIPEReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
