@@ -24,4 +24,13 @@
 	url = https://github.com/fatih/vim-go
 [submodule ".vim/bundle/vim-coffee-script"]
 	path = .vim/bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script
+    url = https://github.com/kchmck/vim-coffee-script
+[submodule ".vim/bundle/ale"]
+	path = .vim/bundle/ale
+    url = https://github.com/dense-analysis/ale
+[submodule ".vim/bundle/editorconfig-vim"]
+	path = .vim/bundle/editorconfig-vim
+    url = https://github.com/editorconfig/editorconfig-vim
+[submodule ".vim/bundle/vim-hack"]
+	path = .vim/bundle/vim-hack
+    url = https://github.com/hhvm/vim-hack

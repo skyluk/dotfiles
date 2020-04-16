@@ -1,0 +1,6 @@
+# vim swap files
+*.swn
+*.swo
+*.swp
+
+fish/fish_history
