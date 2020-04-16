@@ -32,8 +32,7 @@ alias gl='git log'
 
 alias gcm='gco master'
 alias tst='gco test'
-alias repo='cd ~/workspace/wrk'
-alias dc='docker-compose'
+alias repo='cd ~/workspace/trunk'
 
 alias buf='buffalo'
 
@@ -43,6 +42,3 @@ alias mount_go='sshfs ross@thorin:/media/tank/projects/go ~/mnt/thorin-go/'
 alias mount_py='sshfs ross@thorin:/media/tank/projects/py ~/mnt/thorin-py/'
 
 start_agent
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ross/google-cloud-sdk/path.fish.inc' ]; . '/Users/ross/google-cloud-sdk/path.fish.inc'; end
