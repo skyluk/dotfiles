@@ -20,6 +20,7 @@ setenv GOBIN $GOPATH/bin
 setenv WRK $HOME/Projects/wrk
 
 set -g fish_user_paths $GOBIN $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/go@1.11/bin" $fish_user_paths
 
 alias git='hub'
 alias g='hub'
@@ -29,10 +30,11 @@ alias gb='git branch'
 alias gco='git checkout'
 alias gd='git diff'
 alias gl='git log'
+alias grp='git pull --rebase origin master'
 
 alias gcm='gco master'
 alias tst='gco test'
-alias repo='cd ~/workspace/wrk'
+alias repo='cd ~/dev/wrk'
 alias dc='docker-compose'
 
 alias buf='buffalo'
@@ -44,5 +46,6 @@ alias mount_py='sshfs ross@thorin:/media/tank/projects/py ~/mnt/thorin-py/'
 
 start_agent
 
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ross/google-cloud-sdk/path.fish.inc' ]; . '/Users/ross/google-cloud-sdk/path.fish.inc'; end
+if [ -f '/usr/local/google-cloud-sdk/path.fish.inc' ]; . '/usr/local/google-cloud-sdk/path.fish.inc'; end
