@@ -21,6 +21,7 @@ set hlsearch
 set showcmd
 set ruler
 set backspace=indent,eol,start
+set number
 
 " make pasting text better
 " nnoremap <F3> :set invpaste paste?<CR>
