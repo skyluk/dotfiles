@@ -17,7 +17,6 @@ setenv XDEBUG_CONFIG 'remote_enable=1 remote_mode=req remote_port=9000 remote_ho
 setenv SSH_ENV $HOME/.ssh/environment
 setenv GOPATH $HOME/Projects/go
 setenv GOBIN $GOPATH/bin
-setenv WRK $HOME/Projects/wrk
 
 set -g fish_user_paths $GOBIN $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/go@1.11/bin" $fish_user_paths
@@ -33,8 +32,6 @@ alias gl='git log'
 alias grp='git pull --rebase origin master'
 
 alias gcm='gco master'
-alias tst='gco test'
-alias repo='cd ~/dev/wrk'
 alias dc='docker-compose'
 
 alias buf='buffalo'
@@ -46,6 +43,8 @@ alias mount_py='sshfs ross@thorin:/media/tank/projects/py ~/mnt/thorin-py/'
 
 start_agent
 
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/usr/local/google-cloud-sdk/path.fish.inc' ]; . '/usr/local/google-cloud-sdk/path.fish.inc'; end
+
+# Add specific configs for work machine
+if [ -f '~/.config/fish/config.fish.wrk' ]; . '~/.config/fish/config.fish.wrk'; end
