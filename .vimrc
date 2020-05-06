@@ -64,6 +64,7 @@ vnoremap <F1> <ESC>
 
 au BufNewFile,BufRead *.ino set filetype=c
 au BufNewFile,BufRead *.t set filetype=php
+au BufNewFile,BufRead *.libsonnet set filetype=jsonnet
 
 let g:dbext_default_profile = 'PG'
 "let g:dbext_default_profile_PG = 'type=PGSQL:user=sparkfun:passwd=:dbname=sparkfun:host=10.1.1.32'
