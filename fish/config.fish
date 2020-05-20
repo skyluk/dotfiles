@@ -43,8 +43,14 @@ alias mount_py='sshfs ross@thorin:/media/tank/projects/py ~/mnt/thorin-py/'
 
 start_agent
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/usr/local/google-cloud-sdk/path.fish.inc' ]; . '/usr/local/google-cloud-sdk/path.fish.inc'; end
+set -l hname (hostname)
 
 # Add specific configs for work machine
-if [ -f '~/.config/fish/config.fish.wrk' ]; . '~/.config/fish/config.fish.wrk'; end
+if test -f ~/.config/fish/{$hname}.fish.inc
+    . ~/.config/fish/{$hname}.fish.inc
+end
+
+# update PATH for the Google Cloud SDK.
+if test -f '/usr/local/google-cloud-sdk/path.fish.inc'
+    . '/usr/local/google-cloud-sdk/path.fish.inc'
+end
