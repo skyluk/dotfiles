@@ -15,11 +15,6 @@ end
 
 setenv XDEBUG_CONFIG 'remote_enable=1 remote_mode=req remote_port=9000 remote_host=127.0.0.1 remote_connect_back=0'
 setenv SSH_ENV $HOME/.ssh/environment
-setenv GOPATH $HOME/Projects/go
-setenv GOBIN $GOPATH/bin
-
-set -g fish_user_paths $GOBIN $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/go@1.11/bin" $fish_user_paths
 
 alias git='hub'
 alias g='hub'
