@@ -60,7 +60,11 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
-"let g:go_fmt_autosave = 0
+let g:go_fmt_autosave = 1
+
+let g:autopep8_on_save = 1              "format on save
+let g:autopep8_disable_show_diff = 1    "no diff window
+let g:autopep8_max_line_length = 100    "line length = 100
 
 au BufNewFile,BufRead *.ino set filetype=c
 au BufNewFile,BufRead *.t set filetype=php
