@@ -37,3 +37,6 @@
 [submodule ".vim/bundle/vim-jsonnet"]
 	path = .vim/bundle/vim-jsonnet
 	url = git@github.com:google/vim-jsonnet.git
+[submodule ".vim/bundle/vim-autopep8"]
+	path = .vim/bundle/vim-autopep8
+	url = git@github.com:tell-k/vim-autopep8.git
