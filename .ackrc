@@ -1,0 +1,2 @@
+--type-set=csv:ext:csv
+--type-set=gotest:match:/.+_test\.go/
